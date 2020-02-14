@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing</title>
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+    <script>
+        mocha.setup('bdd');
+    </script>
+
+    <!-- подключаем chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <!-- в chai есть много всего, выносим assert в глобальную область -->
+    <script>
+        var assert = chai.assert;
+    </script>
+    <!-- в элементе с id="mocha" будут результаты тестов -->
+    <script src="ConditinalOperators/task1.js"></script>
+    <script src="ConditinalOperators/task2.js"></script>
+    <script src="ConditinalOperators/task3.js"></script>
+    <script src="ConditinalOperators/task4.js"></script>
+    <script src="ConditinalOperators/task5.js"></script>
+    <!-- запустить тесты! -->
+
+</head>
+<body>
+<div id="mocha"></div>
+<script>
+    describe("task1_1", function(){
+        it("Input а=4, b=3 (a%2=0)", function(){
+            assert.equal(parityCheck(4,3),12);
+        });
+        it("Input а=3, b=3 (a%2!=0)", function(){
+            assert.equal(parityCheck(3,3),6);
+        });
+        it("Input а=text, b=3", function(){
+            assert.equal(isNaN(parityCheck("text",3)), true);
+        });
+        it("Input а=4, b=text", function(){
+            assert.equal(isNaN(parityCheck(4,"text")), true);
+        });
+        it("Input а=undefined, b=5", function(){
+            assert.equal(isNaN(parityCheck(undefined,5)), true);
+        });
+        it("Input а=4, b=undefined", function(){
+            assert.equal(isNaN(parityCheck(4,undefined)), true);
+        });
+        it("Input а=4, b=Nan", function(){
+            assert.equal(isNaN(parityCheck(4,NaN)), true);
+        });
+        it("Input а=Nan, b=5", function(){
+            assert.equal(isNaN(parityCheck(NaN,5)), true);
+        });
+    });
+    describe("task1_2", function(){
+        it("Input а=1, b=1", function(){
+            assert.equal(quarter(1,1),"1 quarter");
+        });
+        it("Input а=-1, b=1", function(){
+            assert.equal(quarter(-1,1),"2 quarter");
+        });
+        it("Input а=1, b=-1", function(){
+            assert.equal(quarter(1,-1),"4 quarter");
+        });
+        it("Input а=-1, b=-1", function(){
+            assert.equal(quarter(-1,-1),"3 quarter");
+        });
+        it("Input а=text, b=3", function(){
+            assert.equal(isNaN(quarter("text",3)), true);
+        });
+        it("Input а=4, b=text", function(){
+            assert.equal(isNaN(quarter(4,"text")), true);
+        });
+        it("Input а=undefined, b=5", function(){
+            assert.equal(isNaN(quarter(undefined,5)), true);
+        });
+        it("Input а=4, b=undefined", function(){
+            assert.equal(isNaN(quarter(4,undefined)), true);
+        });
+        it("Input а=4, b=Nan", function(){
+            assert.equal(isNaN(quarter(4,NaN)), true);
+        });
+        it("Input а=Nan, b=5", function(){
+            assert.equal(isNaN(quarter(NaN,5)), true);
+        });
+    });
+</script>
+<script>
+    mocha.run();
+</script>
+</body>
+</html>
