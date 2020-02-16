@@ -39,9 +39,17 @@ textarea{
     resize: none;
 }
 body{
-    background: beige;
+    background: aliceblue;
     font-size: 25px;
     font-family: 'Tomorrow', sans-serif;
+}
+#preResult{
+    background: #5b5b5b;
+    text-align: right;
+    font-family: 'Tomorrow', sans-serif;
+    color: darkgrey;
+    width:408px;
+    margin: 0;
 }
 #input{
     margin: 0;
