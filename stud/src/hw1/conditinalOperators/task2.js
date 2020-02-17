@@ -7,5 +7,7 @@ function quarter(x,y) {
         return "3 quarter";
     } else if (x > 0 && y < 0) {
         return "4 quarter";
+    } else{
+        return "center";
     }
 }

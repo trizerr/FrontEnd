@@ -40,17 +40,8 @@
         it("Input а=text, b=3", function(){
             assert.equal(isNaN(parityCheck("text",3)), true);
         });
-        it("Input а=4, b=text", function(){
-            assert.equal(isNaN(parityCheck(4,"text")), true);
-        });
         it("Input а=undefined, b=5", function(){
             assert.equal(isNaN(parityCheck(undefined,5)), true);
-        });
-        it("Input а=4, b=undefined", function(){
-            assert.equal(isNaN(parityCheck(4,undefined)), true);
-        });
-        it("Input а=4, b=Nan", function(){
-            assert.equal(isNaN(parityCheck(4,NaN)), true);
         });
         it("Input а=Nan, b=5", function(){
             assert.equal(isNaN(parityCheck(NaN,5)), true);
@@ -69,26 +60,80 @@
         it("Input а=-1, b=-1", function(){
             assert.equal(quarter(-1,-1),"3 quarter");
         });
+        it("Input а=0, b=0", function(){
+            assert.equal(quarter(0,0), "center");
+        });
         it("Input а=text, b=3", function(){
             assert.equal(isNaN(quarter("text",3)), true);
-        });
-        it("Input а=4, b=text", function(){
-            assert.equal(isNaN(quarter(4,"text")), true);
         });
         it("Input а=undefined, b=5", function(){
             assert.equal(isNaN(quarter(undefined,5)), true);
         });
-        it("Input а=4, b=undefined", function(){
-            assert.equal(isNaN(quarter(4,undefined)), true);
-        });
         it("Input а=4, b=Nan", function(){
             assert.equal(isNaN(quarter(4,NaN)), true);
         });
-        it("Input а=Nan, b=5", function(){
-            assert.equal(isNaN(quarter(NaN,5)), true);
+    });
+    describe("task1_3", function() {
+        it("Input а=text, b=3, c=3", function(){
+            assert.equal(sumPositive("text", 3, 3), 6);
+        });
+        it("Input а=undefined, b=5, c=1", function(){
+            assert.equal(sumPositive(undefined, 5, 1), 6);
+        });
+        it("Input а=4, b=Nan, c=7", function(){
+            assert.equal(sumPositive(4, NaN, 7), 11);
+        });
+        it("All negative", function(){
+            assert.equal(sumPositive(-4, -9, -8), 0);
+        });
+        it("All positive", function(){
+            assert.equal(sumPositive(4, 9, 8), 21);
+        });
+        it("Input а=4, b=-2, c=7", function(){
+            assert.equal(sumPositive(4, -2, 7), 11);
         });
     });
-</script>
+    describe("task1_4", function() {
+        it("Input а=text, b=3, c=3", function(){
+            assert.equal(isNaN(multiSum("text", 3, 3)), true);
+        });
+        it("Input а=undefined, b=5, c=1", function(){
+            assert.equal(isNaN(multiSum(undefined, 5, 1)), true);
+        });
+        it("Input а=4, b=Nan, c=7", function(){
+            assert.equal(isNaN(multiSum(4, NaN, 7)), true);
+        });
+        it("Input а=1, b=2, c=3", function(){
+            assert.equal(multiSum(1, 2, 3), 9);
+        });
+        it("Input а=1, b=1, c=1", function(){
+            assert.equal(multiSum(1, 1, 1), 6);
+        });
+    });
+    describe("task1_5", function() {
+        it("Grade A", function() {
+            assert.equal(grade(15), "F");
+        });
+        it("Grade E", function() {
+            assert.equal(grade(25), "E");
+        });
+        it("Grade D", function() {
+            assert.equal(grade(45), "D");
+        });
+        it("Grade C", function() {
+            assert.equal(grade(65), "C");
+        });
+        it("Grade B", function() {
+            assert.equal(grade(85), "B");
+        });
+        it("Grade A", function() {
+            assert.equal(grade(95), "A");
+        });
+        it("Grade Negative", function() {
+            assert.equal(grade(-15), "error");
+        });
+    });
+    </script>
 <script>
     mocha.run();
 </script>
