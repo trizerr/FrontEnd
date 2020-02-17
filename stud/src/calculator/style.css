@@ -1,8 +1,8 @@
 #calculator{
-    width: 30%;
+    width: 26.8%;
     margin: 0 auto;
     margin-top: 100px;
-
+    border:1px solid gray;
 }
 button{
     background: #e5e5e5;
@@ -15,7 +15,7 @@ button{
     font-family: 'Tomorrow', sans-serif;
 }
 table {
-background: #5b5b5b;
+background: black;
 }
 td, tr{
     margin: 0;
@@ -25,9 +25,18 @@ td, tr{
    color: #e5e5e5;
 }
 .operation{
-    background: #fa790f;
+    background: limegreen;
     color:white;
 
+}
+#AC{
+    background: lawngreen;
+}
+#backspace{
+    background: lawngreen;
+}
+#percent{
+    background: lawngreen;
 }
 textarea{
     background: #5b5b5b;
@@ -39,12 +48,12 @@ textarea{
     resize: none;
 }
 body{
-    background: aliceblue;
+    background-image: url("back.gif");
     font-size: 25px;
     font-family: 'Tomorrow', sans-serif;
 }
 #preResult{
-    background: #5b5b5b;
+    background: black;
     text-align: right;
     font-family: 'Tomorrow', sans-serif;
     color: darkgrey;
@@ -55,7 +64,7 @@ body{
     margin: 0;
     padding: 0;
     width: 408px;
-    background: #5b5b5b;
+    background: black;
     border:none;
     height: 100px;
     text-align: right;

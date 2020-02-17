@@ -8,6 +8,13 @@ document.getElementById("1").onclick = function(){
     value = input.value;
     Result();
 }
+document.getElementById("backspace").onclick = function() {
+    value = input.value;
+    input.value=value.substring(0,value.length-1);
+    value = input.value;
+    Result();
+}
+
 document.getElementById("2").onclick = function(){
     input.value += 2;
     value = input.value;
@@ -85,7 +92,7 @@ document.getElementById(".").onclick = function(){
     value = input.value;
     Result();
 }
-document.getElementById("%").onclick = function(){
+document.getElementById("percent").onclick = function(){
     input.value += "%";
     value = input.value;
     Result();
