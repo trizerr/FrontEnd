@@ -3,10 +3,25 @@ let i=0, j=0, input, temp="", result=false;
 input = document.getElementById("input");
 preResult = document.getElementById("preResult");
 let value = input.value;
-document.getElementById("1").onclick = function(){
-    input.value += 1;
-    value = input.value;
-    Result();
+let name;
+
+const buttons = document.querySelectorAll(".number")
+for (const button of buttons) {
+    button.addEventListener('click', function(event) {
+        input.value += button.innerHTML;
+        value = input.value;
+        Result();
+    })
+}
+const operationss = document.querySelectorAll(".operation")
+for (const operation of operationss) {
+    operation.addEventListener('click', function(event) {
+        input.value += operation.innerHTML;
+        operations[i] = operation.innerHTML;
+        i++;
+        value = input.value;
+        Result();
+    })
 }
 document.getElementById("backspace").onclick = function() {
     value = input.value;
@@ -15,88 +30,6 @@ document.getElementById("backspace").onclick = function() {
     Result();
 }
 
-document.getElementById("2").onclick = function(){
-    input.value += 2;
-    value = input.value;
-    Result();
-}
-document.getElementById("3").onclick = function(){
-    input.value += 3;
-    value = input.value;
-    Result();
-}
-document.getElementById("4").onclick = function(){
-    input.value += 4;
-    value = input.value;
-    Result();
-}
-document.getElementById("5").onclick = function(){
-    input.value += 5;
-    value = input.value;
-    Result();
-}
-document.getElementById("6").onclick = function(){
-    input.value += 6;
-    value = input.value;
-    Result();
-}
-document.getElementById("7").onclick = function(){
-    input.value += 7;
-    value = input.value;
-    Result();
-}
-document.getElementById("0").onclick = function(){
-    input.value += 0;
-    value = input.value;
-    Result();
-}
-document.getElementById("8").onclick = function(){
-    input.value += 8;
-    value = input.value;
-    Result();
-}
-document.getElementById("9").onclick = function(){
-    input.value += 9;
-    value = input.value;
-    Result();
-}
-document.getElementById("+").onclick = function(){
-    input.value += "+";
-    operations[i] = "+";
-    i++;
-    value = input.value;
-    Result();
-}
-document.getElementById("-").onclick = function(){
-    input.value += "-";
-    i++;
-    value = input.value;
-    Result();
-}
-document.getElementById("*").onclick = function(){
-    input.value += "*";
-    operations[i] = "*";
-    i++;
-    value = input.value;
-    Result();
-}
-document.getElementById("/").onclick = function(){
-    input.value += "/";
-    operations[i] = "/";
-    i++;
-    value = input.value;
-    Result();
-}
-document.getElementById(".").onclick = function(){
-    input.value += ".";
-    value = input.value;
-    Result();
-}
-document.getElementById("percent").onclick = function(){
-    input.value += "%";
-    value = input.value;
-    Result();
-}
 document.getElementById("AC").onclick = function(){
     input.value = "";
     i=0;

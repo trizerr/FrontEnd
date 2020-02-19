@@ -25,18 +25,18 @@ td, tr{
    color: #e5e5e5;
 }
 .operation{
-    background: limegreen;
+    background: orange;
     color:white;
 
 }
 #AC{
-    background: lawngreen;
+    background: #e5e5e5;
 }
 #backspace{
-    background: lawngreen;
+    background: #e5e5e5;
 }
 #percent{
-    background: lawngreen;
+    background: #e5e5e5;
 }
 textarea{
     background: #5b5b5b;

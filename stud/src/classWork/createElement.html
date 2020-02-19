@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>createElement</title>
+</head>
+<body>
+<div id="root">
+    <div id="inputs">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </div>
+    <div id="buttons">
+        <input  type="button" value="create" id="create">
+        <input  type="button" value="update" id="update">
+        <input  type="button" value="delete" id="delete">
+        <input  type="button" value="read" id="read">
+    </div>
+    <div id="list">
+        <ul>
+            <li id="1">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</div>
+<script>
+
+    var ul = document.createElement("li");
+    ul.innerHTML="d";
+    var list = document.getElementById("list");
+    document.body.insertBefore(ul, list);
+    list.append(ul);
+</script>
+
+
+</body>
+</html>
