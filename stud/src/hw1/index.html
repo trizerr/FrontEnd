@@ -20,10 +20,17 @@
     </script>
     <!-- в элементе с id="mocha" будут результаты тестов -->
     <script src="ConditinalOperators/task1.js"></script>
+    <script src="ConditinalOperators/task1.js"></script>
     <script src="ConditinalOperators/task2.js"></script>
     <script src="ConditinalOperators/task3.js"></script>
     <script src="ConditinalOperators/task4.js"></script>
     <script src="ConditinalOperators/task5.js"></script>
+    <script src="loops/task1.js"></script>
+    <script src="loops/task2.js"></script>
+    <script src="loops/task3.js"></script>
+    <script src="loops/task4.js"></script>
+    <script src="loops/task5.js"></script>
+    <script src="loops/task6.js"></script>
     <!-- запустить тесты! -->
 
 </head>
@@ -131,6 +138,75 @@
         });
         it("Grade Negative", function() {
             assert.equal(grade(-15), "error");
+        });
+    });
+    describe("task2_1", function() {
+        it("check sum of even numbers from 1 to 100", function () {
+            assert.deepEqual(SumEven(), [49, 2450]);
+        });
+    });
+    describe("task2_2", function() {
+        it("if number 13 is simple", function () {
+            assert.equal(isSimple(13), "is simple");
+        });
+        it("if number 14 is simple", function () {
+            assert.equal(isSimple(14), "is not simple");
+        });
+        it("NaN argument", function () {
+            assert.equal(isSimple(NaN), "is not simple");
+        });
+        it("Undefined argument", function () {
+            assert.equal(isSimple(undefined), "is not simple");
+        });
+    });
+    describe("task2_3", function() {
+        it("Undefined argument", function () {
+            assert.equal(sqrt(undefined), "error");
+        });
+        it("sqrt of 9", function () {
+            assert.equal(sqrt(9), 3);
+        });
+    });
+    describe("task2_4", function() {
+        it("factorial 3", function () {
+            assert.equal(factorial(3), 6);
+        });
+        it("factorial 1", function () {
+            assert.equal(factorial(1), 1);
+        });
+        it("factorial 4", function () {
+            assert.equal(factorial(4), 24);
+        });
+    });
+    describe("task2_5", function() {
+        it("sum numbers of 123", function () {
+            assert.equal(sumNumbers(123), 6);
+        });
+        it("sum numbers of 12", function () {
+            assert.equal(sumNumbers(12), 3);
+        });
+        it("sum numbers of 1111", function () {
+            assert.equal(sumNumbers(1111), 4);
+        });
+        it("sum numbers of NaN", function () {
+            assert.equal(isNaN(sumNumbers(NaN)), true);
+        });
+        it("sum numbers of undefined", function () {
+            assert.equal(sumNumbers(undefined), "error!");
+        });
+    });
+    describe("task2_5", function() {
+        it("mirror of 123", function () {
+            assert.equal(mirror(123), 321);
+        });
+        it("mirror of 553", function () {
+            assert.equal(mirror(553), 355);
+        });
+        it("mirror of undefined", function () {
+            assert.equal(mirror(undefined), "Error!");
+        });
+        it("mirror of undefined", function () {
+            assert.equal(isNaN(mirror(NaN)), true);
         });
     });
     </script>
