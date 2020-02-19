@@ -1,7 +1,12 @@
-c, newnumbers=[], length=numbers.length;
-for(var i=0; i<=numbers.length; i++, length--){
-    newnumbers[i]=numbers[length];
+function arrayReverse(numbers) {
+    if(numbers!=undefined ) {
+        let  length = numbers.length-1;
+        let newnumbers=[];
+        for (let i = 0; i < numbers.length; i++, length--) {
+            newnumbers[i] = numbers[length];
+        }
+            return newnumbers;
+    }
+    return "error";
 }
-for(var i=0; i<=numbers.length; i++){
-    console.log(newnumbers[i]);
-}
+

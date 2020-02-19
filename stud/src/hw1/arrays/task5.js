@@ -1,7 +1,12 @@
-var numbers=[2, 4, 7, 2, 1], summ=0;
-for(var i=0;i<numbers.length;i++){
-    if(i%2!=0){
-        summ+=numbers[i];
+function arraySumUnEvenIndex(numbers) {
+    if(numbers!=undefined && isNaN(numbers)) {
+        let summ = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            if (i % 2 != 0) {
+                summ += numbers[i];
+            }
+        }
+        return summ;
     }
+    return "error";
 }
-console.log(summ);

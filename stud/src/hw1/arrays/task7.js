@@ -1,6 +1,11 @@
-var numbers=[2, 4, 7, 2, 1, 8, 7], count=0;
-for(var i=0; i<numbers.length; i++){
-    if(numbers[i]%2!=0)
-        count++;
+function unEvenCount(numbers) {
+    let count = 0;
+    if(numbers!=undefined ) {
+        for (var i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 != 0)
+                count++;
+        }
+        return count;
+    }
+    return "error";
 }
-console.log(count);

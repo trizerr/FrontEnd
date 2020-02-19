@@ -31,6 +31,19 @@
     <script src="loops/task4.js"></script>
     <script src="loops/task5.js"></script>
     <script src="loops/task6.js"></script>
+    <script src="Arrays/task1.js"></script>
+    <script src="Arrays/task2.js"></script>
+    <script src="Arrays/task3.js"></script>
+    <script src="Arrays/task4.js"></script>
+    <script src="Arrays/task5.js"></script>
+    <script src="Arrays/task6.js"></script>
+    <script src="Arrays/task7.js"></script>
+    <script src="Arrays/task8.js"></script>
+    <script src="Arrays/task9.js"></script>
+    <script src="Functions/task1.js"></script>
+    <script src="Functions/task2_5.js"></script>
+    <script src="Functions/task3.js"></script>
+    <script src="Functions/task4.js"></script>
     <!-- запустить тесты! -->
 
 </head>
@@ -207,6 +220,131 @@
         });
         it("mirror of undefined", function () {
             assert.equal(isNaN(mirror(NaN)), true);
+        });
+    });
+    describe("task3_1", function() {
+        it("min element of 3, 5, -4", function () {
+            assert.equal(minElement([3,5,-4]), -4);
+        });
+        it("min element of 77, 0, 88, 6", function () {
+            assert.equal(minElement([77,0,88,6]), 0);
+        });
+        it("min element of undefined", function () {
+            assert.equal(minElement(undefined), "error");
+        });
+        it("min element NaN", function () {
+            assert.equal(isNaN(minElement(NaN)), true);
+        });
+    });
+    describe("task3_2", function() {
+        it("max element of 3, 5, -4", function () {
+            assert.equal(maxElement([3, 5, -4]), 5);
+        });
+        it("max element of 77, 0, 88, 6", function () {
+            assert.equal(maxElement([77,0,88,6]), 88);
+        });
+        it("max element of undefined", function () {
+            assert.equal(maxElement(undefined), "error");
+        });
+        it("max element NaN", function () {
+            assert.equal(isNaN(maxElement(NaN)), true);
+        });
+    });
+    describe("task3_3", function() {
+        it("min index element of 3, 5, -4", function () {
+            assert.equal(minIndex([3,5,-4]), 2);
+        });
+        it("min index element of 77, 0, 88, 6", function () {
+            assert.equal(minIndex([77,0,88,6]), 1);
+        });
+        it("min index element of undefined", function () {
+            assert.equal(minIndex(undefined), "error");
+        });
+        it("min index element NaN", function () {
+            assert.equal(isNaN(minIndex(NaN)), true);
+        });
+    });
+    describe("task3_4", function() {
+        it("max index element of 3, 5, -4", function () {
+            assert.equal(maxIndex([3,5,-4]), 1);
+        });
+        it("max index element of 77, 0, 88, 6", function () {
+            assert.equal(maxIndex([77,0,88,6]), 2);
+        });
+        it("max index element of undefined", function () {
+            assert.equal(maxIndex(undefined), "error");
+        });
+        it("max index element NaN", function () {
+            assert.equal(isNaN(maxIndex(NaN)), true);
+        });
+    });
+    describe("task3_5", function() {
+        it("sum of array of 3, 5, -4", function () {
+            assert.equal(arraySumUnEvenIndex([3,5,-4]), 5);
+        });
+        it("sum of array of 7, 1, 8, 6", function () {
+            assert.equal(arraySumUnEvenIndex([7,1,8,6]), 7);
+        });
+        it("sum of array of undefined", function () {
+            assert.equal(arraySumUnEvenIndex(undefined), "error");
+        });
+        it("sum of array of NaN", function () {
+            assert.equal(arraySumUnEvenIndex(NaN), 0);
+        });
+    });
+    describe("task3_6", function() {
+        it("reverse of array of 1, 2, 3, 4", function () {
+            assert.deepEqual(arrayReverse([1, 2, 3, 4]), [4,3, 2, 1]);
+        });
+        it("reverse of array of undefined", function () {
+            assert.deepEqual(arrayReverse(undefined), "error");
+        });
+        it("reverse of array of NaN", function () {
+            assert.deepEqual(arrayReverse(NaN), []);
+        });
+    });
+    describe("task3_7", function() {
+        it("sum of array of 2, 5, 7", function () {
+            assert.equal(unEvenCount([2,5,7]), 2);
+        });
+        it("sum of array of 7, 1, 8, 6", function () {
+            assert.equal(unEvenCount([7,1,8,6]), 2);
+        });
+        it("sum of array of undefined", function () {
+            assert.equal(unEvenCount(undefined), "error");
+        });
+        it("sum of array of NaN", function () {
+            assert.equal(unEvenCount(NaN), 0);
+        });
+    });
+    describe("task3_8", function() {
+        it("switch of array of 1, 2, 3, 4", function () {
+            assert.deepEqual(arraySwitchHalf([1, 2, 3, 4]), [3,4, 1,2]);
+        });
+    });
+    describe("task3_9", function() {
+        it("sort 1, -1, 44, 4", function () {
+            assert.deepEqual(sort([1, -1, 44, 4]), [-1,1,4,44]);
+        });
+    });
+    describe("task4_1", function() {
+        it("day of the week: 3", function () {
+            assert.equal(dayOfTheWeek(3), "Wednsday");
+        });
+    });
+    describe("task4_2and5", function() {
+        it("11234 to string", function () {
+            assert.equal(numberToString(11234), "eleven thousand two hundred thirty four");
+        });
+    });
+    describe("task4_3", function() {
+        it("11234 to string", function () {
+            assert.equal(numberToString(504), "five hundred four");
+        });
+    });
+    describe("task4_4", function() {
+        it("distance. x1=1 x2=4, y1=2, y2=2", function () {
+            assert.equal(distance(1,4,2,2), 3);
         });
     });
     </script>

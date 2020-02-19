@@ -1,7 +1,12 @@
-var numbers=[1, 14, 8, 4, -8, -45], min=numbers[0];
-for(var i=0; i<numbers.length; i++){
-    if(numbers[i]<min){
-        min=numbers[i];
+function minElement(numbers) {
+    if(numbers!=undefined) {
+        let min = numbers[0];
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] < min) {
+                min = numbers[i];
+            }
+        }
+        return min;
     }
+    return  "error";
 }
-console.log("min element of array = " + min);

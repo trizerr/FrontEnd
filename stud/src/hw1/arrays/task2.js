@@ -1,7 +1,12 @@
-var numbers=[1, 14, 8, 4, -8, -45], max=numbers[0];
-for(var i=0; i<numbers.length; i++){
-    if(numbers[i]>max){
-        max=numbers[i];
+function maxElement(numbers) {
+    if(numbers!=undefined) {
+        let max = numbers[0];
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+        }
+        return max;
     }
+   return "error";
 }
-console.log("max element of array = " + max);
