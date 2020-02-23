@@ -9,10 +9,10 @@
 <body>
 <div id="root">
     <div id="inputs">
-        <input type="text" id="idInput">
-        <input type="text" id="firstNameInput">
-        <input type="text" id="lastNameInput">
-        <input type="text" id="ageInput">
+        <input type="text" id="idInput" placeholder="ID">
+        <input type="text" id="firstNameInput" placeholder="First Name">
+        <input type="text" id="lastNameInput" placeholder="Last Name">
+        <input type="text" id="ageInput" placeholder="Age">
     </div>
     <div id="buttons">
         <input  type="button" value="create" id="create">
@@ -37,39 +37,43 @@
 
     const create = document.querySelector("#create")
         create.addEventListener('click', function(event) {
-
             var listDiv = document.querySelector("#listDiv"); // adding input
             var idInput = document.querySelector("#idInput");
             var firstNameInput = document.querySelector("#firstNameInput");
             var lastNameInput = document.querySelector("#lastNameInput");
             var ageInput = document.querySelector("#ageInput");
 
-            var idString = document.createElement("td"); // adding elements of line(<td>)
-            var firstNameString = document.createElement("td");
-            var lastNameString = document.createElement("td");
-            var ageString = document.createElement("td");
+            var id="#id"+(idInput.value).toString();
+            if ($(id).length) { //проверка на существование id
+                alert("id already exist");
+            }else {
 
-            idString.innerHTML = idInput.value; // setting value to strings(elements of line(<td>))
-            firstNameString.innerHTML = firstNameInput.value;
-            lastNameString.innerHTML = lastNameInput.value;
-            ageString.innerHTML = ageInput.value;
+                var idString = document.createElement("td"); // adding elements of line(<td>)
+                var firstNameString = document.createElement("td");
+                var lastNameString = document.createElement("td");
+                var ageString = document.createElement("td");
 
-            var string = document.createElement("tr"); //creating line
-            id = "id" + idString.innerHTML;
-            string.id = id; //setting id for line
-            var className = idString.innerHTML; //creating classname for elements(<tr>)
+                idString.innerHTML = idInput.value; // setting value to strings(elements of line(<td>))
+                firstNameString.innerHTML = firstNameInput.value;
+                lastNameString.innerHTML = lastNameInput.value;
+                ageString.innerHTML = ageInput.value;
 
-            listDiv.append(string); //appending new elements to line
-            string.append(idString);
-            string.append(firstNameString);
-            string.append(lastNameString);
-            string.append(ageString);
+                var string = document.createElement("tr"); //creating line
+                id = "id" + idString.innerHTML;
+                string.id = id; //setting id for line
+                var className = idString.innerHTML; //creating classname for elements(<tr>)
 
-            idString.className = className;  // setting classname for elements
-            firstNameString.className = className;
-            lastNameString.className = className;
-            ageString.className = className;
+                listDiv.append(string); //appending new elements to line
+                string.append(idString);
+                string.append(firstNameString);
+                string.append(lastNameString);
+                string.append(ageString);
 
+                idString.className = className;  // setting classname for elements
+                firstNameString.className = className;
+                lastNameString.className = className;
+                ageString.className = className;
+            }
         });
 
     const deletee = document.querySelector("#delete")
