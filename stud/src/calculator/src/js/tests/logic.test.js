@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Test</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
-    <script>
-        mocha.setup('bdd');
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
-    <script src="script.js"></script>
-    <script>
-        var assert = chai.assert;
-    </script>
-</head>
-<body>
-<div id="mocha"></div>
 
-<script>
+const { calc } = require('../indexTest');
+
+describe('test', () => {
     describe("Operations", function(){
         it("sum", function(){
             assert.equal(calc(5,10,"+"),15);
@@ -42,10 +26,5 @@
             assert.equal(calc(5,0,"/"), Infinity);
         });
     });
+})
 
-    </script>
-<script>
-    mocha.run();
-</script>
-</body>
-</html>

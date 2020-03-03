@@ -15,14 +15,14 @@ button{
     font-family: 'Tomorrow', sans-serif;
 }
 table {
-background: black;
+    background: black;
 }
 td, tr{
     margin: 0;
     padding: 0;
 }
 #empty{
-   color: #e5e5e5;
+    color: #e5e5e5;
 }
 .operation{
     background: orange;
