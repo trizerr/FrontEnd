@@ -23,13 +23,13 @@ const paths = {
         html: `${BUILD}/`
     },
     src: {
-        scss: `${SRC}/scss/main.scss`,
+        scss: `${SRC}/css/style.css`,
         js: `${SRC}/js/index.js`,
         img: `${SRC}/img/**/*`,
         public: `${PUBLIC}/**/*`,
     },
     compileWatch: {
-        scss: `${SRC}/scss/**/*.scss`,
+        scss: `${SRC}/css/**/*.css`,
         js: `${SRC}/js/**/*.js`,
         img: `${SRC}/img/**/*`,
         html: `${SRC}/html/*.html`,
@@ -60,7 +60,7 @@ const styles = (paths, outputFilename, outputPath) => {
     return gulp
         .src(paths)
         .pipe(sass().on('error', sass.logError))
-        .pipe(debug({ title: 'scss:' }))
+        .pipe(debug({ title: 'css:' }))
         .pipe(concat(outputFilename))
         .pipe(gulp.dest(outputPath));
 };
