@@ -57,8 +57,7 @@ document.getElementById("AC").onclick = function(){
 
 document.getElementById("=").onclick = function(){
     number2 = parseInt(input.value);
-    console.log(number1,number2,operation);
-    input.value = calc();
+    input.value = calc(number1, number2, operation);
     number1 = 0;
     number2 = 0;
     operation = 0;
@@ -77,7 +76,7 @@ function substruction(a, b){
     return a-b;
 }
 
-function calc(){
+function calc(number1, number2, operation){
      if(operation == "+"){
          result = sum(number1, number2);
      }
