@@ -15,14 +15,14 @@ button{
     font-family: 'Tomorrow', sans-serif;
 }
 table {
-background: black;
+    background: black;
 }
 td, tr{
     margin: 0;
     padding: 0;
 }
 #empty{
-   color: #e5e5e5;
+    color: #e5e5e5;
 }
 .operation{
     background: orange;
@@ -31,6 +31,8 @@ td, tr{
 }
 #AC{
     background: #e5e5e5;
+    width: 303px;
+    padding-right: 0px;
 }
 #backspace{
     background: #e5e5e5;
@@ -48,7 +50,6 @@ textarea{
     resize: none;
 }
 body{
-    background-image: url("back.gif");
     font-size: 25px;
     font-family: 'Tomorrow', sans-serif;
 }
