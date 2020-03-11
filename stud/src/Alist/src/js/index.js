@@ -16,8 +16,8 @@ Alist.prototype.init = function () { // initialize
     this.arr = [];
     let index = 0;
     while(this.defaultArray[index]){
-    this.arr[index] = this.defaultArray[index];
-    index++;
+        this.arr[index] = this.defaultArray[index];
+        index++;
     }
 }
 //-----------------------------------------------
@@ -94,7 +94,7 @@ Alist.prototype.min = function () {
     let size = this.size();
     for(let i = 0; i < size; i++){
         if(this.arr[i]<min) {
-        min = this.arr[i];
+            min = this.arr[i];
         }
     }
     return min;
@@ -167,9 +167,9 @@ Alist.prototype.halfReverse = function () {
     let first = [], second = [];
     if(size % 2 == 0){
         for(let i = 0; i < size/2; i++)
-          first[i] = this.arr[i];
+            first[i] = this.arr[i];
         for(let i = size/2, j = 0; i < size; i++, j++)
-          second[j] = this.arr[i];
+            second[j] = this.arr[i];
         first = first.reverse();
         second = second.reverse();
         for(let i = 0; i < size/2; i++)
@@ -192,4 +192,8 @@ Alist.prototype.halfReverse = function () {
     }
 
     return this.arr;
+
+}
+module.exports={
+Alist:Alist
 }
