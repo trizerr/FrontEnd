@@ -1,6 +1,10 @@
 "use strict";
 
+<<<<<<< Updated upstream
 var personList = [], i = 0, checkExist = false, db;
+=======
+var personList = [], i = 0, checkExist = false;
+>>>>>>> Stashed changes
 var listDiv = document.querySelector("#listDiv"); // adding input
 var idInput = document.querySelector("#idInput");
 var firstNameInput = document.querySelector("#firstNameInput");
@@ -29,6 +33,7 @@ function localStorageFunc() {
     }
 }
 function indexDBFunc() {
+<<<<<<< Updated upstream
 
   let db;
   let dbReq = indexedDB.open('myDB', 1);
@@ -43,6 +48,13 @@ function indexDBFunc() {
   dbReq.onerror = event => {
     alert('error opening database ' + event.target.errorCode);
   };
+=======
+  if (!('indexedDB' in window)) {
+    console.log('This browser doesn\'t support IndexedDB');
+    return;
+  }
+
+>>>>>>> Stashed changes
 }
 
 
