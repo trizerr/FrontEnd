@@ -1,6 +1,6 @@
 "use strict";
 
-var personList = [], i = 0, checkExist = false;
+var personList = [], i = 0, checkExist = false, db;
 var listDiv = document.querySelector("#listDiv"); // adding input
 var idInput = document.querySelector("#idInput");
 var firstNameInput = document.querySelector("#firstNameInput");
@@ -29,11 +29,20 @@ function localStorageFunc() {
     }
 }
 function indexDBFunc() {
-  if (!('indexedDB' in window)) {
-    console.log('This browser doesn\'t support IndexedDB');
-    return;
-  }
 
+  let db;
+  let dbReq = indexedDB.open('myDB', 1);
+  dbReq.onupgradeneeded = event => {
+    console.log("d");
+    db = event.target.result;
+    let persons = db.createObjectStore('persons', { keyPath: 'id' });
+  };
+  dbReq.onsuccess = event => {
+    db = event.target.result;
+  };
+  dbReq.onerror = event => {
+    alert('error opening database ' + event.target.errorCode);
+  };
 }
 
 
