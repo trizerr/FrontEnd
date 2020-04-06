@@ -1,0 +1,78 @@
+{
+    "name": "landing",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "gulp",
+        "clean": "gulp clean",
+        "build": "gulp build",
+        "test": "nyc mocha --opts ./mocha.opts"
+    },
+    "dependencies": {
+        "@babel/core": "7.6.0",
+        "@babel/preset-env": "7.6.0",
+        "@babel/register": "7.8.3",
+        "browser-sync": "2.26.7",
+        "chai": "4.2.0",
+        "del": "5.1.0",
+        "eslint": "6.8.0",
+        "eslint-config-airbnb": "18.0.1",
+        "eslint-config-prettier": "6.9.0",
+        "eslint-plugin-babel": "5.3.0",
+        "eslint-plugin-import": "2.19.1",
+        "eslint-plugin-prettier": "3.1.2",
+        "eslint-plugin-react-hooks": "2.3.0",
+        "esm": "3.2.25",
+        "gulp": "4.0.2",
+        "gulp-babel": "8.0.0",
+        "gulp-concat": "2.6.1",
+        "gulp-copy": "4.0.1",
+        "gulp-debug": "4.0.0",
+        "gulp-file-include": "2.1.0",
+        "gulp-less": "4.0.1",
+        "gulp-sass": "4.0.2",
+        "jsdom": "16.2.0",
+        "localStorage": "1.0.4",
+        "mocha": "^7.1.0",
+        "nyc": "15.0.0",
+        "prettier": "1.19.1",
+        "raf": "3.4.1",
+        "sinon": "9.0.0",
+        "through2": "3.0.1"
+    },
+    "nyc": {
+        "extension": [
+            ".js"
+        ],
+        "check-coverage": true,
+        "per-file": true,
+        "lines": 100,
+        "statements": 100,
+        "functions": 100,
+        "branches": 100,
+        "reporter": [
+            "html",
+            "text",
+            "text-summary"
+        ],
+        "require": [
+            "@babel/register"
+        ],
+        "exclude": [
+            "coverage/**",
+            "tests/**",
+            "test{,-*}.js",
+            "**/*test.js",
+            "**/__tests__/**",
+            "**/node_modules/**",
+            ".nyc_output/**",
+            ".nyc_output-tmp/**",
+            "**/mockData/**",
+            "testConfig/**",
+            "**/mock{,*}.js"
+        ],
+        "sourceMap": false,
+        "cache": false,
+        "all": false,
+        "report-dir": "coverage"
+    }
+}
