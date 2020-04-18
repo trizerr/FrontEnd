@@ -1,0 +1,27 @@
+#root{
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+input[type=button]{
+    width: 160px;
+    font-size: 22px;
+    margin-top: 10px;
+}
+tr, th{
+    padding-right: 57px;
+    text-align: center;
+    padding-left: 57px;
+}
+#head{
+    text-align: center;
+}
+table{
+    position: relative;
+    margin-top: 50px;
+    border: 1px solid #ddd;
+
+}
+tbody{
+    margin-right: 20px;
+}

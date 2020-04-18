@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <script src="script.js"></script>
+    <script>
+        var assert = chai.assert;
+    </script>
+</head>
+<body>
+<div id="mocha"></div>
+
+<script>
+    describe("Operations", function(){
+        it("sum", function(){
+            assert.equal(calc([5,10],["+"]),15);
+        });
+        it("substraction", function(){
+            assert.equal(calc([10,5],["-"]),5);
+        });
+        it("division", function(){
+            assert.equal(calc([70,5],["/"]),14);
+        });
+        it("multiplication", function(){
+            assert.equal(calc([7,5],["*"]),35);
+        });
+    });
+    describe("dot", function() {
+        it("sum", function () {
+            assert.equal(calc([10.2,0.2],["+"]), 10.4);
+        });
+    });
+    describe("firstAction", function() {
+        it("sum", function () {
+            assert.equal(calc([3,6,2],["+","*"]), 15);
+        });
+    });
+    describe("ZeroDivide", function() {
+        it("sum", function () {
+            assert.equal(calc([5,0],["/"]), Infinity);
+        });
+    });
+    describe("ZeroDivide", function() {
+        it("sum", function () {
+            assert.equal(calc([5,0],["/"]), Infinity);
+        });
+    });
+
+    </script>
+<script>
+    mocha.run();
+</script>
+</body>
+</html>

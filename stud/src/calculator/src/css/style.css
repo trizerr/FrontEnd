@@ -1,0 +1,77 @@
+#calculator{
+    width: 26.8%;
+    margin: 0 auto;
+    margin-top: 100px;
+    border:1px solid gray;
+}
+button{
+    background: #e5e5e5;
+    width: 100px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    font-family: 'Tomorrow', sans-serif;
+}
+table {
+    background: black;
+}
+td, tr{
+    margin: 0;
+    padding: 0;
+}
+#empty{
+    color: #e5e5e5;
+}
+.operation{
+    background: orange;
+    color:white;
+
+}
+#AC{
+    background: #e5e5e5;
+    width: 303px;
+    padding-right: 0px;
+}
+#backspace{
+    background: #e5e5e5;
+}
+#percent{
+    background: #e5e5e5;
+}
+textarea{
+    background: #5b5b5b;
+    width: 408px ;
+    border:none;
+    height:100px;
+    margin: 0;
+    padding: 0;
+    resize: none;
+}
+body{
+    font-size: 25px;
+    font-family: 'Tomorrow', sans-serif;
+}
+#preResult{
+    background: black;
+    text-align: right;
+    font-family: 'Tomorrow', sans-serif;
+    color: darkgrey;
+    width:408px;
+    margin: 0;
+}
+#input{
+    margin: 0;
+    padding: 0;
+    width: 408px;
+    background: black;
+    border:none;
+    height: 100px;
+    text-align: right;
+    font-size: 60px;
+    font-family: 'Tomorrow', sans-serif;
+    color: white;
+}
+
+button:hover {opacity: 0.8}
